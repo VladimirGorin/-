@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-top">
+
+            <div class="header-top-left">
+                <a href="#" class="header-logo">
+                    <img src="./img/logo.png" alt="">
+                </a>
+
+                <a href="#" class="header-about">О платформе</a>
+            </div>
+
+
+
+            <div class="header-top-right">
+
+                <a href="#" class="header-new">Создание проекта</a>
+
+                <div class="header-alerts">
+                    <img src="./img/bell.svg" alt="">
+                </div>
+
+                <div class="header-profile">
+                    <img src="./img/32.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="header-alerts header-alerts-mobile">
+                <img src="./img/bell.svg" alt="">
+            </div>
+            <!-- Модальное окно (активированное) -->
+            <div class="popup">
+                <div class="popup-wrap">
+                    <!-- профайлы пользователей -->
+                    <div class="popup-section">
+                        <div class="popup-profiles active">
+                            <div class="popup-profiles-img">
+                                <img src="./img/Menu/1Person.svg" alt="">
+                            </div>
+                            <div class="popup-profiles-info">
+                                <div class="popup-profiles-name">Илья Панов</div>
+                                <div class="popup-profiles-email">email@website.com</div>
+                            </div>
+                        </div>
+
+                        <div class="popup-profiles">
+                            <div class="popup-profiles-img">
+                                <img src="./img/Menu/2Person.svg" alt="">
+                            </div>
+                            <div class="popup-profiles-info">
+                                <div class="popup-profiles-name">Александр Смирнов</div>
+                                <div class="popup-profiles-email">email@site.com</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- ссылки midle -->
+                    <div class="popup-section">
+                        <a href="#" class="popup-link">Профиль</a>
+                        <a href="#" class="popup-link">Настройки</a>
+                        <a href="#" class="popup-link">Служба поддержки</a>
+                        <a href="#" class="popup-link mobile">О платформе</a>
+                        <a href="#" class="popup-link mobile green">Создать проект +</a>
+                    </div>
+                    <div class="popup-section">
+                        <a href="#" class="popup-link">Добавить аккаунт</a>
+                        <a href="#" class="popup-link">Выйти</a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="header-middle">
+            <a class="popup_c" style="    margin: 22px 15px 0 0;" href="#">
+                <img style="" id="clossse" onclick="btnActive()" src="./img/Button.png" alt="">
+            </a>
+
+
+                <div id="editePrfile1" style="margin: 90px 0 0 555px;display: none;" class="edit-pasteImg">
+                    <img src="./img/PasteImg.png" alt="">
+                </div>
+
+
+                <div onclick="save()" id="editePrfile2" style="display: none; float: right;" class="edit-save">
+                    <img src="./img/saveButton.png" alt="">
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom-wrap">
+                    <div class="header-info">
+                        <div id="popup-photo" class="popup-headerP">
+                            <div style="border-radius: 5px;height: 240px;width: 230px;background-color: #00000066;" class="popup_header">
+
+                                <img onclick="closeSS()"style="float: right;margin: 10px;" src="./img/x_white.png" alt="">
+                                <div style="right: 0;top: 35px;position: absolute;bottom: 104px;left: 40px;">
+                                    <img style="    width: 165px;" src="./img/PersonSeva.png" alt="">
+                                    <input style="    /* margin: 10px 34px 0 0; */width: 213px;position: absolute;top: 137px;bottom: -73px;left: -21px;" type="range">
+                                </div>
+                            </div>
+                            <div style="margin: 12px 0 0 0;" class="popup_bottom">
+                                <a onclick="closeSS" class="TegAh2" style="margin: 13px 0 0 0;padding: 8px 58px 8px 8px;border: none;color: #2563EB;" href="">Загрузить</a>
+                                <a onclick="closeSS" class="TegAh2" style="margin: 13px 0 0 0;padding: 8px;border: none; color: #2563EB;" href="">Сохранить</a>
+                            </div> 
+                        </div>    
+                        <div onclick=" open_popup()" class="header-info-photo">
+                            <img class="header-info-photo" src="./img/PersonSeva.png" alt="">
+                        </div>
+
+                        <div class="header-info-block">
+                            <div class="header-info-name">Алексей Иванов</div>
+                            <div class="header-info-subs">270 подписчиков</div>
+                        </div>
+                    </div>
+                    <a href="#" onclick="redirect()" class="header-subscribeFalse">Редактировать</a>
+                    <div id="coms" class="popup-gallery" style="display: none;">
+                        <div class="popup-row1G">
+                            <div class="popup-header">
+                                <span style="font-style: normal;font-weight: 500;font-size: 14px;line-height: 24px;/* identical to box height, or 171% *//* My/gray/900 */color: #111827;">Обложка профиля</span>
+                               <div>
+                                    <a onclick="comeBack()" class="TegAh1" href="">Удалить</a>
+                                    <a onclick="comeBack()" class="TegAh2" style="padding: 8px;" href="">Загрузить</a>
+                               </div>
+                            </div>
+                            <div style="flex-wrap: wrap;    display: flex;" class="popup-galle">
+                                <div class="photo-flex"><img src="./img/Image.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image2.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image3.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image2.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image2.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image3.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image2.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image2.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image3.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image2.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image2.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image3.png" alt=""></div>
+                                <div class="photo-flex"><img src="./img/Image.png" alt=""></div>
+     
+                            </div>
+                        </div>
+                        <div class="popup-row2G"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="closeSSE" class="popup-headerPM">
+        <div class="popup_header">
+            <span style="float: right; margin: 10px; position: absolute; left: 0; top: 0;" >Фото профиля</span>
+            <img onclick="closeSS()"style="float: right; margin: 10px; position: absolute; right: 0; top: 0;" src="./img/closeIcon.png" alt="">
+            <div style="right: 0;top: 35px;position: absolute;bottom: 104px;left: 40px;">
+                <img style=" position: absolute;left: calc(51% - 221px/2 + 0.5px);bottom: 78px;font-family: 'Inter';font-style: normal;font-weight: 400;font-size: 14px;line-height: 24px;text-align: center;color: #FFFFFF;width: 165px;" src="./img/PersonSeva.png" alt="">
+                <span style="position: absolute; width: 221px; height: 24px;left: calc(46% - 221px/2 + 0.5px); bottom: 25px; font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 14px; line-height: 24px; text-align: center; color: #FFFFFF;">Перемещайте и масштабируйте</span>
+            </div>
+        </div>
+        <div style="    /* margin: 12px 0 0 0; */display: flex;justify-content: space-between;" class="popup_bottom">
+            <a onclick="closeSS" class="TegAh2" style="margin: 13px 0 0 0;padding: 8px 58px 8px 8px;border: none;color: #2563EB;" href="">Загрузить</a>
+            <a onclick="closeSS" class="TegAh2" style="margin: 13px 0 0 0;padding: 8px;border: none; color: #2563EB;" href="">Сохранить</a>
+        </div>  
+    </div>
+    <main class="main">
+        <div class="container">
+            <div class="main-wrap">
+
+                <div class="main-tabs">
+                    <div id="selectToForm-1" onclick="toggle1()" class="main-tab active">Создал 9</div>
+                    <div id="selectToForm-2" onclick="toggle2()" class="main-tab ">Поддержал 15</div>
+                </div>
+
+                <div id="toggle1" class="main-posts_1">
+
+
+                    <div class="post">
+
+                        <div class="post-header">
+                            <div class="post-header-img">
+                                <img src="./img/post-person.png" alt="">
+                            </div>
+
+                            <div class="post-header-info">
+                                <div class="post-header-ttl">Опыт развития различных форм деятельности</div>
+                                <div class="post-header-date">вчера в 17:40</div>
+                            </div>
+
+                            <div class="post-header-button">
+                                <img src="./img/doted.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="post-img">
+                            <img src="./img/Image.jpg" alt="">
+                        </div>
+
+                        <div class="post-text">В соответствии с законами сохранения энергии, угловая скорость искажает
+                            суммарный поворот. Направление заставляет иначе взглянуть на то, что такое курс. Собственный
+                            кинетический момент мал. Гироскопический прибор вращает гиротахометр.</div>
+
+                        <div class="post-info">
+                            <div class="post-like">
+                                <img src="./img/arrow.svg" alt="">
+                            </div>
+                            <div class="post-count">212</div>
+                            <div class="post-dislike">
+                                <img src="./img/arrow.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post">
+
+                        <div class="post-header">
+                            <div class="post-header-img">
+                                <img src="./img/Person.png" alt="">
+                            </div>
+
+                            <div class="post-header-info">
+                                <div class="post-header-ttl">Катарсис глазами современников</div>
+                                <div class="post-header-date">вчера в 17:40</div>
+                            </div>
+
+                            <div class="post-header-button">
+                                <img src="./img/doted.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="post-img">
+                            <img src="./img/Image.png" alt="">
+                        </div>
+
+                        <div class="post-text">Манерничанье случайно. Синхронический подход интуитивно понятен. Возвышенное фактурно. Воображение заканчивает определенный культовый образ, однако само по себе состояние игры всегда амбивалентно. Трагедия образует параллелизм.
+                        </div>
+
+                        <div class="post-info">
+                            <div class="post-like">
+                                <img src="./img/arrow.svg" alt="">
+                            </div>
+                            <div class="post-count">212</div>
+                            <div class="post-dislike">
+                                <img src="./img/arrow.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="toggle2" class="main-posts_2">
+
+
+                    <div class="post">
+
+                        <div class="post-header">
+                            <div class="post-header-img">
+                                <img src="./img/Person3.png" alt="">
+                            </div>
+
+                            <div class="post-header-info">
+                                <div class="post-header-ttl">Опыт развития различных форм деятельности</div>
+                                <div class="post-header-date">вчера в 17:40 <span class="pay-enabled">250 <b>₽</b></span></div>
+                            </div>
+
+                            <div class="post-header-button">
+                                <img src="./img/doted.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="post-img">
+                            <img src="./img/Image3.png" alt="">
+                        </div>
+
+                        <div class="post-text">В соответствии с законами сохранения энергии, угловая скорость искажает суммарный поворот. Направление заставляет иначе взглянуть на то, что такое курс. Собственный кинетический момент мал. Гироскопический прибор вращает гиротахометр.</div>
+
+                        <div class="post-info">
+                            <div class="post-like">
+                                <img src="./img/arrow.svg" alt="">
+                            </div>
+                            <div class="post-count">212</div>
+                            <div class="post-dislike">
+                                <img src="./img/arrow.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post">
+
+                        <div class="post-header">
+                            <div class="post-header-img">
+                                <img src="./img/Person2.png" alt="">
+                            </div>
+
+                            <div class="post-header-info">
+                                <div class="post-header-ttl">Катарсис глазами современников</div>
+                                <div class="post-header-date">вчера в 17:40  <span class="pay-disble">· сумма скрыта</span></div>
+                            </div>
+
+                            <div class="post-header-button">
+                                <img src="./img/doted.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="post-img">
+                            <img src="./img/Image2.png" alt="">
+                        </div>
+
+                        <div class="post-text">Манерничанье случайно. Синхронический подход интуитивно понятен. Возвышенное фактурно. Воображение заканчивает определенный культовый образ, однако само по себе состояние игры всегда амбивалентно. Трагедия образует параллелизм.</div>
+
+                        <div class="post-info">
+                            <div class="post-like">
+                                <img src="./img/arrow.svg" alt="">
+                            </div>
+                            <div class="post-count">212</div>
+                            <div class="post-dislike">
+                                <img src="./img/arrow.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <aside class="main-aside">
+                    <div class="main-aside-text">Переходное состояние последовательно. Весьма существенно следующее:
+                        интенция изящно образует фабульный каркас. Текст, как бы это ни казалось парадоксальным, имеет
+                        архетип, однако само по себе состояние игры всегда амбивалентно. Теория наивного и
+                        сентиментального искусства.</div>
+                    <div class="main-aside-adress">Химки, Московская обл.</div>
+                    <div class="main-aside-links">
+                        <a href="#" class="main-aside-link">Вконтакте</a>
+                        <a href="#" class="main-aside-link">Telegram</a>
+                        <a href="#" class="main-aside-link">YouTube</a>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+
+    </main>
+    <div class="footer">
+        <div class="footer__row-1">
+            <div class="footer__date">
+                <span>© 2022 Uppora</span>
+            </div>
+            <hr>
+            <div class="footer__compInfo">
+                <a href="#">О платформе</a>
+            </div>
+        </div>
+        <div class="footer__row-2">
+            <div class="footer__langue">
+                <select class=".form-select">
+                    <option value="1">Русский</option>
+                    <option value="2">Текст</option>
+                    <option value="3">Текст</option>
+                </select>
+            </div>
+            <hr>
+            <div class="footer__prv">
+                <a href="#">Правовые документы</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="closeElement1" class="popup-folovers">
+        <div class="popup-body">
+            <div class="popup-header">
+                <div class="popup-title">
+                    <span>270 подписчиков</span>
+                </div>
+                <div class="popup-closeBtn">
+                    <img onclick="closeElement()" id="closeBtn" src="./img/closeIcon.png" alt="">
+                </div>
+            </div>
+            <div class="popup-main">
+                <div class="popup-user">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                    <div class="popup-userF">
+                        <a href="#" id="subscribe" class="header-subscribe">Подписаться</a>
+                    </div>
+                </div>
+                <div class="popup-user">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                    <div class="popup-userF">
+                        <a href="#" id="subscribe" class="header-subscribe">Подписаться</a>
+                    </div>
+                </div>
+                <div class="popup-user">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                    <div class="popup-userF">
+                        <a href="#" id="subscribe" class="header-subscribe">Подписаться</a>
+                    </div>
+                </div>
+                <div class="popup-user">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                    <div class="popup-userF">
+                        <a href="#" class="header-subscribeFalse">Вы подписаны</a>
+                    </div>
+                </div>
+                <div class="popup-user">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                    <div class="popup-userF">
+                        <a href="#" id="subscribe" class="header-subscribe">Подписаться</a>
+                    </div>
+                </div>
+                <div class="popup-user">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                    <div class="popup-userF">
+                        <a href="#" id="subscribe" class="header-subscribe">Подписаться</a>
+                    </div>
+                </div>
+                <div class="popup-user">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                    <div class="popup-userF">
+                        <a href="#" id="subscribe" class="header-subscribe">Подписаться</a>
+                    </div>
+                </div>
+                <div class="popup-user">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                    <div class="popup-userF">
+                        <a href="#" id="subscribe" class="header-subscribe">Подписаться</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div  id="closeElement2"  class="popup-folovers-mobi">
+        <div class="popup-body-mobi">
+            <div class="popup-header-mobi">
+                <div class="popup-closeBtn-mobi">
+                    <img onclick="closeElement()" id="closeBtn" src="./img/Arrow Left.png" alt="">
+                </div>
+                <div class="popup-title">
+                    <span>270 подписчиков</span>
+                </div>
+            </div>
+            <div class="popup-main">
+
+
+                <div class="popup-user-mobi">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-user-mobi">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-user-mobi">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-user-mobi">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-user-mobi">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-user-mobi">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-user-mobi">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-user-mobi">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-user-mobi">
+                    <div class="popup-userI">
+                        <div class="popup-userP">
+                            <img src="./img/Person-1.png" alt="">
+                        </div>
+                        <div class="popup-userN">
+                            <span>Алексей Иванов</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <script src="./JS/jQuery.js"></script>
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-top">
+
+            <div class="header-top-left">
+                <a href="#" class="header-logo">
+                    <img src="./img/logo.png" alt="">
+                </a>
+
+                <a href="#" class="header-about">О платформе</a>
+            </div>
+
+
+
+            <div class="header-top-right">
+
+                <a href="#" class="header-new">Создание проекта</a>
+
+                <div class="header-alerts">
+                    <img src="./img/bell.svg" alt="">
+                </div>
+
+                <div class="header-profile">
+                    <img style="width: 32px;height: 32px;" src="./img/Empty.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="header-alerts header-alerts-mobile">
+                <img src="./img/bell.svg" alt="">
+            </div>
+            <!-- Модальное окно (активированное) -->
+            <div class="popup">
+                <div class="popup-wrap">
+                    <!-- профайлы пользователей -->
+                    <div class="popup-section">
+                        <div class="popup-profiles active">
+                            <div class="popup-profiles-img">
+                                <img style="width: 32px;height: 32px;" src="./img/Empty.png" alt="">
+                            </div>
+                            <div class="popup-profiles-info">
+                                <div class="popup-profiles-name">Илья Панов</div>
+                                <div class="popup-profiles-email">email@website.com</div>
+                            </div>
+                        </div>
+
+                        <div class="popup-profiles">
+                            <div class="popup-profiles-img">
+                                <img src="./img/Menu/2Person.svg" alt="">
+                            </div>
+                            <div class="popup-profiles-info">
+                                <div class="popup-profiles-name">Александр Смирнов</div>
+                                <div class="popup-profiles-email">email@site.com</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- ссылки midle -->
+                    <div class="popup-section">
+                        <a href="#" class="popup-link">Профиль</a>
+                        <a href="#" class="popup-link">Настройки</a>
+                        <a href="#" class="popup-link">Служба поддержки</a>
+                        <a href="#" class="popup-link mobile">О платформе</a>
+                        <a href="#" class="popup-link mobile green">Создать проект +</a>
+                    </div>
+                    <div class="popup-section">
+                        <a href="#" class="popup-link">Добавить аккаунт</a>
+                        <a href="#" class="popup-link">Выйти</a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="header-middle-Empty">
+            <a href="#">
+                <div class="header-add-photo">
+                    <div class="popup-hover">
+                        <div class="popup-image">
+                            <img style="right: 0;top: -9px;left: 225px;position: absolute;" src="./img/top.png" alt="">
+                            <img src="./img/x_white.png" alt="">
+                        </div>
+                        <div class="popup-hover-border">
+                            <span>Загрузите обложку профиля или выберите из готовых изображений</span>
+                        </div>
+                    </div>                
+                    <img src="./img/Plus.png" alt="">
+                </div>
+            </a>
+            
+        </div>
+
+        <div class="header-bottom">
+
+            <div class="container">
+                <div class="header-bottom-wrap">
+                    <div class="header-info">
+                        <div class="header-info-photo">
+                            <img class="header-info-photo" src="./img/Empty.png" alt="">
+                        </div>
+                        <div class="popup-hover-1">
+                            <div class="popup-image">
+                                <img style="right: 0;bottom: -9px;/* top: 0; */left: 35px;position: absolute;transform: rotate(180deg);"src="./img/top.png" alt="">
+                                <img style="position: absolute;right: 0;left: 265px;top: 10px;" src="./img/x_white.png" alt="">
+                            </div>
+                            <div class="popup-hover-border">
+                                <span>Нажмите на изображение, чтобы <br> загрузить фотографию профиля</span>
+                            </div>
+                        </div>  
+                        <div class="header-info-block">
+                            <div class="header-info-name">Илья</div>
+                            <div class="header-info-subs">0 подписчиков</div>
+                            
+                        </div>
+                    </div>
+                    <div class="popup-mask">
+                        <div class="popup-maskSb">
+                            <a href="#" class="header-subscribeFalse">Редактировать</a>
+
+                        </div>
+                        <div class="popup-hover-2">
+                            <div class="popup-image">
+                                <img style="right: 0;top: -9px;left: 220px;position: absolute;" src="./img/top.png" alt="">
+                                <img style="    right: 0;bottom: -9px;top: 10px;left: 265px;position: absolute;transform: rotate(180deg);" src="./img/x_white.png" alt="">
+                            </div>
+                            <div class="popup-hover-border">
+                                <span>Загрузите обложку профиля или выберите из готовых изображений</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="main-wrap">
+
+                <div class="main-tabs">
+                    <div id="selectToForm-1" onclick="toggle1()" class="main-tab active">Создал</div>
+                    <div id="selectToForm-2" onclick="toggle2()" class="main-tab ">Поддержал</div>
+                </div>
+
+                <div id="toggle1" class="main-posts_1">
+
+
+                    <span>Здесь будут собраны проекты, которые вы <a style="font-size: 14px;color: #2563EB;" href="#">создадите</a></span>
+
+
+                </div>
+
+                <div id="toggle2" class="main-posts_2">
+
+                    <span>Здесь будут собраны проекты, которые вы <a style="font-size: 14px;color: #2563EB;" href="#">создадите</a></span>
+
+                </div>
+
+                <aside class="main-aside">
+                    <div class="main-aside-text">Переходное состояние последовательно. Весьма существенно следующее:
+                        интенция изящно образует фабульный каркас. Текст, как бы это ни казалось парадоксальным, имеет
+                        архетип, однако само по себе состояние игры всегда амбивалентно. Теория наивного и
+                        сентиментального искусства.</div>
+                    <div class="main-aside-adress">Химки, Московская обл.</div>
+                    <div class="main-aside-links">
+                        <a href="#" class="main-aside-link">Вконтакте</a>
+                        <a href="#" class="main-aside-link">Telegram</a>
+                        <a href="#" class="main-aside-link">YouTube</a>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+
+    </main>
+    <div class="footer">
+        <div class="footer__row-1">
+            <div class="footer__date">
+                <span>© 2022 Uppora</span>
+            </div>
+            <hr>
+            <div class="footer__compInfo">
+                <a href="#">О платформе</a>
+            </div>
+        </div>
+        <div class="footer__row-2">
+            <div class="footer__langue">
+                <select class=".form-select">
+                    <option value="1">Русский</option>
+                    <option value="2">Текст</option>
+                    <option value="3">Текст</option>
+                </select>
+            </div>
+            <hr>
+            <div class="footer__prv">
+                <a href="#">Правовые документы</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-hover">
+        <div class="popup-image">
+            <img style="right: 0;top: -9px;left: 220px;position: absolute;" src="./img/top.png" alt="">
+            <img src="./img/x_white.png" alt="">
+        </div>
+        <div class="popup-hover-border">
+            <span>Загрузите обложку профиля или выберите из готовых изображений</span>
+        </div>
+    </div>
+
+    
+
+    <script src="./JS/jQuery.js"></script>
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>
